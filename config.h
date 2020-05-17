@@ -40,8 +40,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "Tag-1", "Tag-2", "Tag-3", "Tag-4", "Tag-5", "Tag-6", "Tag-7", "Tag-8", "Tag-9" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -60,9 +59,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "Tile",      tile },    /* first entry is default */
-    { "><>",      NULL },    /* no layout function means floating behavior */
-    { "[M]",      monocle },
+    { "T",      tile },    /* first entry is default */
+    { "N",      NULL },    /* no layout function means floating behavior */
+    { "M",      monocle },
 };
 
 /* key definitions */
