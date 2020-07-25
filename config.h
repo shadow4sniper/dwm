@@ -115,8 +115,8 @@ static Key keys[] = {
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
     /* my keybinds */
     { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
-    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; pkill -RTMIN+7 dwmblocks") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5; pkill -RTMIN+7 dwmblocks") },
     TAGKEYS(                        XK_1,                      0)
         TAGKEYS(                        XK_2,                      1)
         TAGKEYS(                        XK_3,                      2)
