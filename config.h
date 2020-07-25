@@ -117,6 +117,13 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; pkill -RTMIN+7 dwmblocks") },
     { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5; pkill -RTMIN+7 dwmblocks") },
+    { 0, XF86XK_AudioPrev,        spawn, SHCMD("mpc prev; pkill -RTMIN+2 dwmblocks") },
+	{ 0, XF86XK_AudioNext,        spawn, SHCMD("mpc next; pkill -RTMIN+2 dwmblocks") },
+	{ 0, XF86XK_AudioPause,       spawn, SHCMD("mpc pause; pkill -RTMIN+2 dwmblocks") },
+	{ 0, XF86XK_AudioPlay,        spawn, SHCMD("mpc play; pkill -RTMIN+2 dwmblocks") },
+	{ 0, XF86XK_AudioStop,        spawn, SHCMD("mpc stop; pkill -RTMIN+2 dwmblocks") },
+	{ 0, XF86XK_AudioRewind,      spawn, SHCMD("mpc seek -10") },
+	{ 0, XF86XK_AudioForward,     spawn, SHCMD("mpc seek +10") },
     TAGKEYS(                        XK_1,                      0)
         TAGKEYS(                        XK_2,                      1)
         TAGKEYS(                        XK_3,                      2)
