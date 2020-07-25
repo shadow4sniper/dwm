@@ -82,8 +82,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "80x23", NULL };
 static const char *browsercmd[]  = { "google-chrome-stable", NULL };
-static const char *raisevol[] = { "amixer", "set", "Master", "2+", NULL };
-static const char *lowervol[] = { "amixer", "set", "Master", "2-", NULL };
+//static const char *raisevol[] = { "amixer", "set", "Master", "2+", NULL };
+//static const char *lowervol[] = { "amixer", "set", "Master", "2-", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -115,8 +115,8 @@ static Key keys[] = {
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
     /* my keybinds */
     { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
-    { 0, XF86XK_AudioRaiseVolume, spawn, {.v = raisevol} },
-    { 0, XF86XK_AudioLowerVolume, spawn, {.v = lowervol} },
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
     TAGKEYS(                        XK_1,                      0)
         TAGKEYS(                        XK_2,                      1)
         TAGKEYS(                        XK_3,                      2)
