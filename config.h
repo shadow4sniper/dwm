@@ -113,6 +113,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,      togglealttag,   {0} },
     { MODKEY|ShiftMask,             XK_f,      fullscreen,     {0} },
     { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks") },
     { MODKEY,                       XK_F8,     spawn,          SHCMD("mailsync") },
     /* my keybinds */
     { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
