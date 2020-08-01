@@ -120,11 +120,11 @@ static Key keys[] = {
     { 0, XF86XK_AudioMute,        spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioPrev,        spawn, SHCMD("mpc prev;") },
-	{ 0, XF86XK_AudioNext,        spawn, SHCMD("mpc next;") },
-	{ 0, XF86XK_AudioPause,       spawn, SHCMD("mpc pause;") },
-	{ 0, XF86XK_AudioPlay,        spawn, SHCMD("mpc play;") },
-	{ 0, XF86XK_AudioStop,        spawn, SHCMD("mpc stop;") },
+    { 0, XF86XK_AudioPrev,        spawn, SHCMD("mpc prev; pkill -RTMIN+11 dwmblocks") },
+	{ 0, XF86XK_AudioNext,        spawn, SHCMD("mpc next; pkill -RTMIN+11 dwmblocks") },
+	{ 0, XF86XK_AudioPause,       spawn, SHCMD("mpc pause; pkill -RTMIN+11 dwmblocks") },
+	{ 0, XF86XK_AudioPlay,        spawn, SHCMD("mpc play; pkill -RTMIN+11 dwmblocks") },
+	{ 0, XF86XK_AudioStop,        spawn, SHCMD("mpc stop; pkill -RTMIN+11 dwmblocks") },
     TAGKEYS(                        XK_1,                      0)
         TAGKEYS(                        XK_2,                      1)
         TAGKEYS(                        XK_3,                      2)
