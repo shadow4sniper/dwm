@@ -4,10 +4,10 @@
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 15;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 15;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -22,10 +22,9 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-//static const char col_cyan[]        = "#37474F";
+static const char col_cyan[]        = "#37474F";
 //static const char col_border[]      = "#42A5F5";
-static const char col_cyan[]        = "#444444";
-static const char col_border[]      = "#A89984";
+static const char col_border[]      = "#928374";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
