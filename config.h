@@ -19,13 +19,11 @@ static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "TerminessTTF Nerd Font:size=12", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
 static const char dmenufont[]       = "TerminessTTF Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
+static const char col_gray2[]       = "#333333";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-//static const char col_cyan[]        = "#37474F";
-//static const char col_border[]      = "#42A5F5";
-static const char col_cyan[]        = "#282828";
-static const char col_border[]      = "#42A5F5";
+static const char col_cyan[]        = "#37474F";
+static const char col_border[]      = "#d33579";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
